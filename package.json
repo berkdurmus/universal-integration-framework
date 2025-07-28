@@ -1,12 +1,13 @@
 {
   "name": "universal-integration-framework",
-  "version": "0.1.0",
-  "description": "A TypeScript framework for building marketplace integrations with major developer platforms",
+  "version": "1.0.0",
+  "description": "A TypeScript framework for building marketplace integrations with major developer platforms like GitHub, Vercel, Netlify, and Slack",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "build": "tsc",
@@ -16,6 +17,7 @@
     "lint": "eslint src --ext .ts,.tsx",
     "lint:fix": "eslint src --ext .ts,.tsx --fix",
     "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
     "demo": "ts-node --project tsconfig.examples.json -r tsconfig-paths/register examples/demo.ts",
     "example:basic": "ts-node --project tsconfig.examples.json -r tsconfig-paths/register examples/basic-integration.ts",
     "example:github": "ts-node --project tsconfig.examples.json -r tsconfig-paths/register examples/github-integration.ts",
@@ -25,19 +27,36 @@
   "keywords": [
     "integration",
     "oauth",
+    "oauth2",
     "marketplace",
     "developer-tools",
     "typescript",
     "github",
     "vercel",
     "netlify",
-    "webhooks"
+    "slack",
+    "webhooks",
+    "api",
+    "framework",
+    "saas",
+    "platform"
   ],
-  "author": "Universal Integration Framework",
+  "author": {
+    "name": "Berk Durmus",
+    "email": "your-email@example.com",
+    "url": "https://github.com/berkdurmus"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-org/universal-integration-framework.git"
+    "url": "https://github.com/berkdurmus/universal-integration-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/berkdurmus/universal-integration-framework/issues"
+  },
+  "homepage": "https://github.com/berkdurmus/universal-integration-framework#readme",
+  "engines": {
+    "node": ">=16.0.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
@@ -53,7 +72,6 @@
   },
   "dependencies": {
     "axios": "^1.5.0",
-    "crypto": "^1.0.1",
     "jsonwebtoken": "^9.0.2",
     "zod": "^3.22.2"
   },
